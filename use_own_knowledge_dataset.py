@@ -11,8 +11,12 @@ import torch
 from datasets import Features, Sequence, Value, load_dataset
 
 from transformers import (
-    DPRContextEncoder,
-    DPRContextEncoderTokenizerFast,
+# --------------- All changes is here -----------------
+#    DPRContextEncoder,
+#    DPRContextEncoderTokenizerFast,
+    AutoModel as DPRContextEncoder, # any model & tok
+    AutoTokenizer as DPRContextEncoderTokenizerFast,
+# -----------------------------------------------------
     HfArgumentParser,
     RagRetriever,
     RagSequenceForGeneration,
