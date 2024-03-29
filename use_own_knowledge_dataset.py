@@ -188,7 +188,7 @@ class ProcessingArguments:
 @dataclass
 class IndexHnswArguments:
     d: int = field(
-        default=768,
+        default=128,
         metadata={"help": "The dimension of the embeddings to pass to the HNSW Faiss index."},
     )
     m: int = field(
